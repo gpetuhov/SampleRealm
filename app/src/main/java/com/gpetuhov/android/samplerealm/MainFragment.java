@@ -1,5 +1,6 @@
 package com.gpetuhov.android.samplerealm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -105,5 +106,10 @@ public class MainFragment extends Fragment {
     @OnClick(R.id.button_show_all)
     public void showAllData() {
 
+        // Create intent to start second activity
+        Intent intent = new Intent(getActivity(), SecondActivity.class);
+
+        // Start second activity
+        startActivity(intent);
     }
 }

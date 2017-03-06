@@ -11,10 +11,18 @@ public class UserTextItem extends RealmObject {
     }
 
     public String getText() {
-        return mText;
+        if (mText != null) {
+            return mText;
+        } else {
+            return "";
+        }
     }
 
     public void setText(String text) {
-        mText = text;
+        if (text != null) {
+            mText = text;
+        } else {
+            mText = "No value";
+        }
     }
 }
